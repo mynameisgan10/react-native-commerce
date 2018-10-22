@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
     }
 })
 
-const Home = () => (<View style={styles.container}>
+const Discover = () => (<View style={styles.container}>
     <Text style={styles.text}>Home Page</Text>
     <Icon name="user" size={30} color="#900"/>
 </View>)
 
-export default Home
+export default Discover
