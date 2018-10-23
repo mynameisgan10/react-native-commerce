@@ -36,6 +36,7 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* shopletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* shopletTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		323100E2217ED2BC00970706 /* libReactNativeCameraKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323100DE217ED27200970706 /* libReactNativeCameraKit.a */; };
 		32B58814217DE7A70071B17A /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B58813217DE78B0071B17A /* libReactNativeNavigation.a */; };
 		32B58817217DEAE20071B17A /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B58816217DEAE20071B17A /* FontAwesome5_Brands.ttf */; };
 		32B58819217DEAE80071B17A /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B58818217DEAE80071B17A /* FontAwesome5_Regular.ttf */; };
@@ -192,6 +193,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
+		};
+		323100DD217ED27200970706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 323100B4217ED27200970706 /* ReactNativeCameraKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2646934E1CFB2A6B00F3A740;
+			remoteInfo = ReactNativeCameraKit;
 		};
 		32B58812217DE78B0071B17A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -365,6 +373,7 @@
 		2D02E47B1E0B4A5D006451C7 /* shoplet-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shoplet-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* shoplet-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shoplet-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		323100B4217ED27200970706 /* ReactNativeCameraKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeCameraKit.xcodeproj; path = "../node_modules/react-native-camera-kit/ios/lib/ReactNativeCameraKit.xcodeproj"; sourceTree = "<group>"; };
 		32B587E9217DE78B0071B17A /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		32B58816217DEAE20071B17A /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		32B58818217DEAE80071B17A /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
@@ -389,6 +398,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323100E2217ED2BC00970706 /* libReactNativeCameraKit.a in Frameworks */,
 				32B58825217DEB7D0071B17A /* libRNVectorIcons.a in Frameworks */,
 				32B58814217DE7A70071B17A /* libReactNativeNavigation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -559,6 +569,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		323100B5217ED27200970706 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				323100DE217ED27200970706 /* libReactNativeCameraKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		32B587EA217DE78B0071B17A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +615,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				323100B4217ED27200970706 /* ReactNativeCameraKit.xcodeproj */,
 				32B5881C217DEB700071B17A /* RNVectorIcons.xcodeproj */,
 				32B587E9217DE78B0071B17A /* ReactNativeNavigation.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -821,6 +840,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 323100B5217ED27200970706 /* Products */;
+					ProjectRef = 323100B4217ED27200970706 /* ReactNativeCameraKit.xcodeproj */;
+				},
+				{
 					ProductGroup = 32B587EA217DE78B0071B17A /* Products */;
 					ProjectRef = 32B587E9217DE78B0071B17A /* ReactNativeNavigation.xcodeproj */;
 				},
@@ -971,6 +994,13 @@
 			fileType = archive.ar;
 			path = "libprivatedata-tvOS.a";
 			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		323100DE217ED27200970706 /* libReactNativeCameraKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeCameraKit.a;
+			remoteRef = 323100DD217ED27200970706 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		32B58813217DE78B0071B17A /* libReactNativeNavigation.a */ = {

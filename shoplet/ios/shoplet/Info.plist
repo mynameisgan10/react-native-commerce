@@ -8,6 +8,10 @@
 		<string>FontAwesome5_Regular.ttf</string>
 		<string>FontAwesome5_Brands.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Taking photos of the item being sold</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Accessing the photos of items being sold</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
