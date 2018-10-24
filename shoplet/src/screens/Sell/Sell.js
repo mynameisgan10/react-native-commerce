@@ -1,36 +1,23 @@
-import React from 'react'
-import {View, StyleSheet, Text, TouchableHighlight} from 'react-native'
-import {CameraKitCamera} from 'react-native-camera-kit'
+import React, {Component} from 'react'
+import {View, StyleSheet} from 'react-native'
+
+import ImageGallery from '../../components/ImageGallery/ImageGallery'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
-    },
-    takePhoto: {
-        position: 'absolute',
-        padding: 16,
-        bottom: 25,
-        alignItems: 'center',
-        right: 20,
-        left: 20
-        
+        flex: 1,
+        marginTop: 20
     }
 })
 
+export default class Sell extends Component {
 
-const Sell = () => (
-    <View style={styles.container}>
-        <CameraKitCamera
-            ref={cam => this.camera = cam}
-            style={{
-                flex: 1,
-                backgroundColor: 'white'
-            }}
-            hideControls={false}/>
-            <TouchableHighlight style={styles.takePhoto}>
-                <Text>Take photo</Text>
-            </TouchableHighlight>
-    </View>
-)
-
-export default Sell
+    render() {
+        
+        return (
+            <View style={styles.container}>
+                <ImageGallery></ImageGallery>
+            </View>
+        )
+    }
+}

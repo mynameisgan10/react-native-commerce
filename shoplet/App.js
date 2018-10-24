@@ -6,6 +6,7 @@ import Sell from "./src/screens/Sell/Sell"
 import Social from "./src/screens/Social/Social"
 import Activities from "./src/screens/Activities/Activities"
 import Profile from "./src/screens/Profile/Profile"
+import imageGallery from "./src/components/ImageGallery/ImageGallery"
 
 
 Navigation.registerComponent(
@@ -31,6 +32,11 @@ Navigation.registerComponent(
 Navigation.registerComponent(
   "shoplet.ProfileScreen",
   () => Profile
+)
+
+Navigation.registerComponent(
+  "shoplet.imageGallery",
+  () => imageGallery
 )
 
 
@@ -77,11 +83,15 @@ export default () => {
         }
       ],
       tabsStyle: {
-        tabBarSelectedButtonColor: 'black'
+        tabBarSelectedButtonColor: 'black',
+        navBarHidden: true
       },
       appStyle: {
-        tabBarSelectedButtonColor: 'black'
-      }
+        tabBarSelectedButtonColor: 'black',
+        navBarHidden: true,
+        tabBarHidden: false
+      },
+      animationType: 'fade'
     })
   })
 }
