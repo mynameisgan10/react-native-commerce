@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {StyleSheet, View} from 'react-native'
-import {CameraKitGalleryView,} from 'react-native-camera-kit'
+import {StyleSheet, View, Text} from 'react-native'
+import {CameraKitGalleryView} from 'react-native-camera-kit'
 
 import CameraScreen from '../CameraScreen/CameraScreen'
 
@@ -34,7 +34,8 @@ class imageGallery extends Component {
                     minimumLineSpacing={10}
                     columnCount={3}
                     customButtonStyle={{
-                        backgroundColor: 'blue'
+                        image: require('../../images/openCamera.png'),
+                        backgroundColor: 'red'
                     }}
                     onCustomButtonPress={(result) => this.onCustomButtonPressed()}
                     albumName={"All Photos"}

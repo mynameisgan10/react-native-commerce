@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.wix.RNCameraKit.RNCameraKitPackage;
 
 // public class MainApplication extends Application implements ReactApplication {
 
@@ -62,7 +63,8 @@ import com.oblador.vectoricons.VectorIconsPackage;
          // No need to add RnnPackage and MainReactPackage
          return Arrays.<ReactPackage>asList(
              // eg. new VectorIconsPackage()
-             new VectorIconsPackage()
+             new VectorIconsPackage(),
+             new RNCameraKitPackage()
          );
      }
 
