@@ -7,6 +7,7 @@ import Social from "./src/screens/Social/Social"
 import Activities from "./src/screens/Activities/Activities"
 import Profile from "./src/screens/Profile/Profile"
 import imageGallery from "./src/components/ImageGallery/ImageGallery"
+import Camera from "./src/screens/CameraScreen/CameraScreen"
 
 
 Navigation.registerComponent(
@@ -37,6 +38,10 @@ Navigation.registerComponent(
 Navigation.registerComponent(
   "shoplet.imageGallery",
   () => imageGallery
+)
+Navigation.registerComponent(
+  "shoplet.CameraScreen",
+  () => Camera
 )
 
 
@@ -83,13 +88,14 @@ export default () => {
         }
       ],
       tabsStyle: {
-        tabBarSelectedButtonColor: 'black',
-        navBarHidden: true
+        tabBarSelectedButtonColor: 'black'
       },
-      appStyle: {
-        tabBarSelectedButtonColor: 'black',
-        navBarHidden: true,
-        tabBarHidden: false
+      appStyle:{
+        orientation: 'portrait',
+        drawUnderNavBar: true,
+        navBarTransparent: true,
+        navBarHeight: 0,
+        navBarHidden: true
       },
       animationType: 'fade'
     })

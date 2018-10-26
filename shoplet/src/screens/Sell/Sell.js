@@ -11,12 +11,17 @@ const styles = StyleSheet.create({
 })
 
 export default class Sell extends Component {
+    static navigatorStyle = {
+        drawUnderNavBar: true,
+        navBarTranslucent: true
+      };
+
 
     render() {
         
         return (
             <View style={styles.container}>
-                <ImageGallery></ImageGallery>
+                <ImageGallery navigator={this.props.navigator}></ImageGallery>
             </View>
         )
     }
