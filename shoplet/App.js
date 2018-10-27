@@ -51,7 +51,7 @@ export default () => {
     Icon.getImageSource("users",30),
     Icon.getImageSource("plus",30),
     Icon.getImageSource("bell",30),
-    Icon.getImageSource("user",30)
+    Icon.getImageSource("user-alt",30)
   ])
   .then(sources => {
     Navigation.startTabBasedApp({
@@ -95,7 +95,8 @@ export default () => {
         drawUnderNavBar: true,
         navBarTransparent: true,
         navBarHeight: 0,
-        navBarHidden: true
+        navBarHidden: true,
+        tabBarSelectedButtonColor: 'black' // for android
       },
       animationType: 'fade'
     })

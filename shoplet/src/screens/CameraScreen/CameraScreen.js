@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, StyleSheet, Text, TouchableOpacity, Platform, Image} from 'react-native'
+import {View, StyleSheet, TouchableOpacity, Platform} from 'react-native'
 import {CameraKitCamera} from 'react-native-camera-kit'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
@@ -34,6 +34,8 @@ const styles = StyleSheet.create({
 
 class CameraScreen extends Component {
 
+
+   
     onBackButtonPressed = () => {
         this
             .props
@@ -64,17 +66,35 @@ class CameraScreen extends Component {
                     }}/>
                 <TouchableOpacity
                     style={styles.captureButton}
-                    onPress={this.onCaptureButtonPressed}>
+                    onPress={this.onCaptureButtonPressed}
+                    hitSlop={{
+                        top: 60,
+                        left: 60,
+                        bottom: 60,
+                        right: 60
+                    }}>
                     <Icon name='circle' size={60} color="white"/>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.backButton}
-                    onPress={this.onBackButtonPressed}>
+                    onPress={this.onBackButtonPressed}
+                    hitSlop={{
+                        top: 60,
+                        left: 60,
+                        bottom: 60,
+                        right: 60
+                    }}>
                      <Icon name='angle-left' size={40} color="white"/>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.flashButton}
-                    onPress={this.onBackButtonPressed}>
+                    onPress={this.onBackButtonPressed}
+                    hitSlop={{
+                        top: 60,
+                        left: 60,
+                        bottom: 60,
+                        right: 60
+                    }}>
                      <Icon name='bolt' size={20} color="white"/>
                 </TouchableOpacity>
             </View>
