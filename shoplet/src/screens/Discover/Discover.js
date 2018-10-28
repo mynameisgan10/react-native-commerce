@@ -1,13 +1,15 @@
 import React from 'react'
-import {StyleSheet, View, Text} from 'react-native'
-
+import {StyleSheet, View, ScrollView} from 'react-native'
 
 import Searchbar from '../../components/Searchbar/Searchbar'
-import AdsCarousel from '../../components/AdsCarousel/AdsCarousel'
+import AdsCarousel from '../../components/DiscoverScreen/AdsCarousel/AdsCarousel'
+import Categories from '../../components/DiscoverScreen/Categories/Categories'
+import Suggestions from '../../components/DiscoverScreen/Suggestions/Suggestions'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: 'lightgrey'
     },
     text: {
         fontSize: 20,
@@ -18,7 +20,11 @@ const styles = StyleSheet.create({
 const Discover = () => (
     <View style={styles.container}>
         <Searchbar/>
-        <AdsCarousel />
+        <ScrollView>
+            <AdsCarousel />
+            <Categories categories={[{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},]}/>
+            <Suggestions />
+        </ScrollView>
     </View>
 )
 
