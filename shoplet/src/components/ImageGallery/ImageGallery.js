@@ -13,21 +13,21 @@ const styles = StyleSheet.create({
 })
 
 class imageGallery extends Component {
-    // componentDidMount () {
-    //     this.checkGalleryPermission()
-    // }
+    // componentDidMount () {     this.checkGalleryPermission() }
 
     constructor(props) {
         super(props);
-        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-      }
-      onNavigatorEvent(event) {
-          if(event.id === 'willAppear'){
+        this
+            .props
+            .navigator
+            .setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    }
+    onNavigatorEvent(event) {
+        if (event.id === 'willAppear') {
             this.checkGalleryPermission()
-          }
-      
-      }
+        }
 
+    }
 
     state = {
         shouldLoadGallery: false
@@ -37,24 +37,22 @@ class imageGallery extends Component {
         this.checkCameraPermission()
     }
     checkGalleryPermission = () => {
-        Permissions.check('photo').then(response => {
-            if(response === 'authorized'){
-                this.setState({
-                    shouldLoadGallery: true
-                })
-            }else{
-                this.alertForGalleryPermission()
-            }
-        })
+        Permissions
+            .check('photo')
+            .then(response => {
+                if (response === 'authorized') {
+                    this.setState({shouldLoadGallery: true})
+                } else {
+                    this.alertForGalleryPermission(response)
+                }
+            })
     }
     requestGalleryPermission = () => {
         Permissions
             .request('photo')
             .then(response => {
                 if (response === 'authorized') {
-                    this.setState({
-                        shouldLoadGallery: true
-                    })
+                    this.setState({shouldLoadGallery: true})
                 }
             })
     }
@@ -65,11 +63,11 @@ class imageGallery extends Component {
                 if (response === 'authorized') {
                     this.openCamera()
                 } else {
-                    this.alertForCameraPermssion();
+                    this.alertForCameraPermission(response);
                 }
             })
     }
-    alertForGalleryPermission() {
+    alertForGalleryPermission(status) {
         if (Platform.OS === 'android') {
             this.requestGalleryPermission()
         } else {
@@ -82,10 +80,10 @@ class imageGallery extends Component {
                         onPress: () => console.log('Permission denied'),
                         style: 'cancel'
                     },
-                    this.state.photoPermission == 'undetermined'
+                    status == 'undetermined'
                         ? {
                             text: 'OK',
-                            onPress: this.requestCameraPermission
+                            onPress: this.requestGalleryPermission
                         }
                         : {
                             text: 'Enable Access',
@@ -107,14 +105,11 @@ class imageGallery extends Component {
             .request('camera')
             .then(response => {
                 if (response === 'authorized') {
-                    this
-                        .props
-                        .navigator
-                        .showModal({screen: 'shoplet.CameraScreen', animationType: 'slide-up'})
+                    this.openCamera()
                 }
             })
     }
-    alertForCameraPermssion() {
+    alertForCameraPermission(status) {
         if (Platform.OS === 'android') {
             this.requestCameraPermission()
         } else {
@@ -127,7 +122,7 @@ class imageGallery extends Component {
                         onPress: () => console.log('Permission denied'),
                         style: 'cancel'
                     },
-                    this.state.photoPermission == 'undetermined'
+                    status == 'undetermined'
                         ? {
                             text: 'OK',
                             onPress: this.requestCameraPermission
@@ -143,7 +138,7 @@ class imageGallery extends Component {
 
     render() {
         let output = null;
-        if(this.state.shouldLoadGallery){
+        if (this.state.shouldLoadGallery) {
             output = (
                 <CameraKitGalleryView
                     ref={gallery => this.gallery = gallery}

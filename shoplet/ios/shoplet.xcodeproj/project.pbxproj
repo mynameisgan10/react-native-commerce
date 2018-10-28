@@ -1368,7 +1368,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.shoplet1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.shoplet;
 				PRODUCT_NAME = shoplet;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1389,7 +1389,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.shoplet1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.shoplet;
 				PRODUCT_NAME = shoplet;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
