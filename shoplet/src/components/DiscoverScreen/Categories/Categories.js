@@ -38,6 +38,7 @@ class Categories extends Component {
                 <Text style={styles.sectionTitle}>Categories</Text>
                 <FlatList
                     horizontal={true}
+                    showsHorizontalScrollIndicator={false}
                     data={this.props.categories}
                     style={{
                         paddingLeft: 10,

@@ -5,11 +5,11 @@ import Searchbar from '../../components/Searchbar/Searchbar'
 import AdsCarousel from '../../components/DiscoverScreen/AdsCarousel/AdsCarousel'
 import Categories from '../../components/DiscoverScreen/Categories/Categories'
 import Suggestions from '../../components/DiscoverScreen/Suggestions/Suggestions'
+import NewItems from '../../components/DiscoverScreen/NewItems/NewItems'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'lightgrey'
+        flex: 1
     },
     text: {
         fontSize: 20,
@@ -22,8 +22,9 @@ const Discover = () => (
         <Searchbar/>
         <ScrollView>
             <AdsCarousel />
-            <Categories categories={[{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},]}/>
             <Suggestions />
+            <Categories categories={[{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},{iconName: 'laptop', title: 'test123'},]}/>
+            <NewItems />
         </ScrollView>
     </View>
 )
